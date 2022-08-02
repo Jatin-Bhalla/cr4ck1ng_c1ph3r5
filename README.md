@@ -4,4 +4,4 @@
 - Above mentioned are the same books written by the same author 
 - These are the beginner friendly books used by me to write executable programs in python
 - Fell free to provide a better code ^^
--
+- Other related topics will be uploaded in the repository ASAP I finish this book!!
