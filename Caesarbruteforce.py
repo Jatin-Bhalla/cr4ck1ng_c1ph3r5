@@ -18,7 +18,7 @@ def Caesar(input ,k):
 
 plain =input("ENTER YOU PLAIN TEXT:")
 for i in range(len(string.ascii_uppercase)):
-    print( i,"|" , Caesar(plain,1))
+    print( i,"\t" , Caesar(plain,1))
     
 """I have this another piece of code below I saw online using ord()"""
 #check for errors in this line :43
