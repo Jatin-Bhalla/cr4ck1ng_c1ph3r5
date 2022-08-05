@@ -12,8 +12,8 @@ def Caesar(input ,k):
     upper.rotate(k)
     lower.rotate(k)
 
-   upper= upper ='' .join(list(upper))
-   lower = lower ='' .join(list(lower))
+   upper ='' .join(list(upper))
+   lower ='' .join(list(lower))
     return input.translate(str.maketrans(string.ascii_uppercase,upper)).translate(str.maketrans(string.ascii_lowercase,lower))
 
 plain =input("ENTER YOU PLAIN TEXT:")
