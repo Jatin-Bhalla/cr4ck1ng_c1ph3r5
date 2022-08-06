@@ -12,8 +12,9 @@ def Caesar(input ,k):
     lower ='' .join(list(lower))
     return input.translate(str.maketrans(string.ascii_uppercase,upper)).translate(str.maketrans(string.ascii_lowercase,lower))
 plain =input("ENTER YOU PLAIN TEXT:")
+k= int(input("Enter your key:"))
 for i in range(len(string.ascii_uppercase)):
-    print( i,"|" , Caesar(plain,1))
+    print( i,"|" , Caesar(plain,k))
     
 """I have this another piece of code below I saw online using ord()"""
 #check for errors in this line :43
