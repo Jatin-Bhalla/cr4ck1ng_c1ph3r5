@@ -1,4 +1,28 @@
 # WE brute fore the caesar cipher with python script
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------#
+msg = input('Please enter the cipher text:')
+msg = msg.upper()
+#also add msg.lower
+
+vocab = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+#loops through all of the possible keys
+for key in range(26):
+    decoded = ""
+
+    #decodes message with given key
+    for i in msg:
+        if i.isspace():
+            decoded = decoded + i
+        else:
+            letter = vocab.index(i)
+            letter = letter - key
+            letter = letter % 26
+            decoded = decoded + vocab[letter]
+
+    print('Key: %s  Decoded: %s' % (key, decoded))
+#-------------------------------------------------------------------------------------------------------------------------------------------------------------#
+
 #this code uses rotate to encrypt the plain text
 
 import string
@@ -16,7 +40,7 @@ plain =input("ENTER YOU PLAIN TEXT:")
 k= int(input("Enter your key:"))
 print(  Caesar(plain,k))
 
-    
+#--------------------------------------------------------------------------------------------------------------------------------------------------------------#   
 """I have this another piece of code below I saw online using ord()"""
 #check for errors in this line :43
 """
@@ -37,7 +61,7 @@ def Caesar(input,k):
     for x in input:
         if x in str.ascii_letters:
             temp = ord(x)+k
-            if temp > ord("z")             # this line is showing syntax error!?
+            if temp > ord("z"):            # this line is showing syntax error!?
             temp=temp-26
             #this is done cuz if the letter exceeds z it goes back to a
             output =output+chr(temp)
