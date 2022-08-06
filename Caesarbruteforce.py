@@ -1,5 +1,6 @@
 # WE brute fore the caesar cipher with python script
-""" This code ends up providing with every possiblility for the cipher for the english language as there are only 26 letters therefore only 25 possible crypts exist"""
+#this code uses rotate to encrypt the plain text
+
 import string
 import collections
 # this code pieces uses rotate for caesar cipher like literally rorate LOL
@@ -13,8 +14,8 @@ def Caesar(input ,k):
     return input.translate(str.maketrans(string.ascii_uppercase,upper)).translate(str.maketrans(string.ascii_lowercase,lower))
 plain =input("ENTER YOU PLAIN TEXT:")
 k= int(input("Enter your key:"))
-for i in range(len(string.ascii_uppercase)):
-    print( i,"|" , Caesar(plain,k))
+print(  Caesar(plain,k))
+
     
 """I have this another piece of code below I saw online using ord()"""
 #check for errors in this line :43
